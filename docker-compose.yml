@@ -1,3 +1,4 @@
+# retesting docker compose v2 syntax
 services:
   bank-api:
     build: ./bank-api
