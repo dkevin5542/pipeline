@@ -1,0 +1,17 @@
+services:
+  bank-api:
+    build: ./bank-api
+    # container_name: bank-api
+    ports:
+      - "9090:9090" 
+
+  bank-web:
+    build:
+      context: ./bank-web
+      args:
+        REACT_APP_API_URL: "http://localhost:9090/api/v1"
+    # container_name: bank-web
+    ports:
+      - "3000:80"    
+    depends_on:
+      - bank-api
