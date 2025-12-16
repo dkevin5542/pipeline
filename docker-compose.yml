@@ -3,7 +3,7 @@ services:
     build: ./bank-api
     # container_name: bank-api
     ports:
-      - "9090:9090" 
+      - "9090" 
 
   bank-web:
     build:
