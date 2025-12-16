@@ -4,7 +4,7 @@ pipeline {
     environment {
         COMPOSE_FILE = 'docker-compose.yml'
         // change this to your kubeconfig path
-        KUBECONFIG = 'C:\\Users\\dongk\\.kube\\config'
+        // KUBECONFIG = 'C:\\Users\\dongk\\.kube\\config'
     }
 
     stages {
