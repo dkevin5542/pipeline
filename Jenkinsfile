@@ -43,8 +43,8 @@ pipeline {
             bat '''
             kubectl config use-context docker-desktop
             kubectl apply -f k8/namespace.yaml
-            kubectl apply -f k8/bankapi.yaml
-            kubectl apply -f k8/bankweb.yaml
+            kubectl apply -f k8/bank-api.yaml
+            kubectl apply -f k8/bank-web.yaml
             kubectl rollout status deployment/bank-api -n bank
             kubectl rollout status deployment/bank-web -n bank
             kubectl get pods -n bank
