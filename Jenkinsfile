@@ -21,7 +21,7 @@ pipeline {
                 bat """
                 cd %WORKSPACE%
                 docker-compose -f %COMPOSE_FILE% down || exit /b 0
-                docker rm -f bank-api bank-web 2>NUL || exit /b 0
+                docker compose down --remove-orphans || exit /b 0
                 """
 
                 echo "Building and starting containers with docker-compose..."
